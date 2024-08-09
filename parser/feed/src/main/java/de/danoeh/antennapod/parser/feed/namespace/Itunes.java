@@ -78,7 +78,7 @@ public class Itunes extends Namespace {
                 state.getFeed().setDescription(content);
             }
         } else if (NEW_FEED_URL.equals(localName) && content.trim().startsWith("http")) {
-            state.redirectUrl = content.trim();
+            // state.redirectUrl = content.trim(); // Prevents rnz.co.nz from redirecting to a feed that has advertisements.
         }
     }
 }
